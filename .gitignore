@@ -1,0 +1,4 @@
+*.exe
+*.obj
+CppProperties.json
+.vs/
