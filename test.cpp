@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <regex>
@@ -6,36 +5,44 @@ using namespace std;
 
 int main()
 {
-    std::string app;
+    string app;
     int code;
 
+    std::cout << "Please enter the program that you want to open:\x20";
     getline(std::cin, app);
-    
-    bool isSpotify = std::regex_match(app, std::regex::icase("[S,s]potify"));
-    bool isVsCode = std::regex_match(app, std::regex("F"));
+    std::cout << std::endl;
+    // std::cout << "Test!" << std::endl;
+    // bool isSpotify = std::regex_match(app, std::regex("((?i)spotify"));
+    // bool isVsCode = std::regex_match(app, std::regex("(?i)vscode"));
 
-    if ( isSpotify ) {
-        int code = std::system("start C:\\Users\\perkinsal\\AppData\\Roaming\\Spotify\\Spotify.exe");
+    // if (isSpotify) {
+    if (app == "spotify") {
+        code = std::system("start C:\\Users\\perkinsal\\AppData\\Roaming\\Spotify\\Spotify.exe");
     }
-    else if ( false == true ) {
-        std::cout << "This should be impossible?!?!?!?!";
-        return 3;
+    else if (app == "vscode") {
+        code = std::system("start C:\\Users\\perkinsal\\AppData\\Local\\Programs\\\"Microsoft VS Code Insiders\"\\\"Code - Insiders.exe\"");
+    }
+    else if (app == "" || app == "\x20") {
+        std::cout << "Uhh, that isn't a valid input"
     }
     else {
         std::cout << "The program " << app << " is unknown?";
+        std::system("pause");
         return 1;
     }
-    
+
 
     // checking if the command was executed successfully
-    if ( code == 0 || isSpotify ) {
+    if (code == 0) {
         cout << "Command executed successfully." << std::endl;
-    } else {
+    }
+    else {
         cout << "Command execution failed or returned "
             "non-zero: "
             << code << std::endl;
+        std::system("pause");
         return 2;
     }
-
+    std::system("pause");
     return 0;
 }
