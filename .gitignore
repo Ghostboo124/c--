@@ -1,4 +1,7 @@
 *.exe
 *.obj
+*.code-workspace
 CppProperties.json
 .vs/
+venv/
+.vscode/
