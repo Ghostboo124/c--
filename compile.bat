@@ -9,6 +9,16 @@ pause
 echo Building now
 
 @REM Chage the file here
+
 cl /EHsc test.cpp
 
-echo Done Building
+if %ERRORLEVEL% == 0 (
+    echo Done Building
+    set ERRORLEVEL=0
+) else if %ERRORLEVEL% == 9009 (
+    echo ERROR: CL is not on path or you are not running the Developer Command Prompt for VS 20XX
+    set ERRORLEVEL=1
+) else (
+    echo UNKNOWN ERROR HAS OCCURED WHILE BUILDING!
+    set ERRORLEVEL=-1
+)
