@@ -83,4 +83,3 @@ void MainWindow::on_pushButton_3_clicked()
 {
     std::exit(0);
 }
-
