@@ -21,11 +21,11 @@ private slots:
 
     void on_vscodeButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_vsButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_discordButton_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_exitButton_clicked();
 
 private:
     Ui::MainWindow *ui;

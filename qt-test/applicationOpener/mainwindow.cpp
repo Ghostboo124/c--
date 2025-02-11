@@ -47,7 +47,7 @@ void MainWindow::on_vscodeButton_clicked()
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_vsButton_clicked()
 {
     int code;
     code = std::system("start C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Preview\\Common7\\IDE\\devenv.exe");
@@ -63,7 +63,7 @@ void MainWindow::on_pushButton_clicked()
 }
 
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_discordButton_clicked()
 {
     int code;
     code = std::system("start %USERPROFILE%\\AppData\\Local\\DiscordDevelopment\\app-1.0.904\\DiscordDevelopment.exe --processStart DiscordDevelopment.exe");
@@ -79,7 +79,7 @@ void MainWindow::on_pushButton_2_clicked()
 }
 
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_exitButton_clicked()
 {
     std::exit(0);
 }

@@ -1,0 +1,25 @@
+Autodesk Inventor
+Autodesk AutoCad
+Autodesk Fusion // Can be found normally ^^^
+QT
+DaVinci Resolve
+PowerToys (Preview) // Might not be able to install
+Bitwarden
+Cisco Packet Tracer
+Visual Studio Code Insiders --
+CurseForge
+Discord --
+Angry IP Scanner
+Satisfactory Mod Manager
+Modrinth
+7-Zip
+CPUID HWMontor
+Steam
+Plex
+OBS Studio
+Visual Studio --
+Raspberry Pi Imager // Needs admin to open
+Spotify --
+GameMaker
+VLC Media Player
+System Informer
