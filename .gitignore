@@ -4,3 +4,5 @@
 .vs/
 venv/
 .vscode/
+!/installers/*/app/*.exe
+!/installers/*/app/*.obj

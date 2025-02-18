@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_spotifyButton_clicked()
 {
     int code;
-    code = std::system("start C:\\Users\\perkinsal\\AppData\\Roaming\\Spotify\\Spotify.exe");
+    code = std::system("start %APPDATA%\\Spotify\\Spotify.exe");
     std::cout << code << std::endl;
     if (code != 0) {
         code = std::system("start spotify");
@@ -33,11 +33,11 @@ void MainWindow::on_vscodeButton_clicked()
     int code;
     code = std::system("code-insiders");
     if (code != 0) {
-        code = std::system("start C:\\Users\\perkinsal\\AppData\\Local\\Programs\\\"Microsoft VS Code Insiders\"\\\"Code - Insiders.exe\"");
+        code = std::system("start %LOCALAPPDATA\\Programs\\\"Microsoft VS Code Insiders\"\\\"Code - Insiders.exe\"");
         if (code != 0) {
             code = std::system("code");
             if (code != 0) {
-                code = std::system("start C:\\Users\\perkinsal\\AppData\\Local\\Programs\\\"Microsoft VS Code\"\\Code.exe");
+                code = std::system("start %LOCALAPPDATA%\\Programs\\\"Microsoft VS Code\"\\Code.exe");
                 if (code != 0) {
                     std::cout << "An error has occured while running Microsoft Visual Studio Code" << std::endl;
                 }
@@ -50,11 +50,11 @@ void MainWindow::on_vscodeButton_clicked()
 void MainWindow::on_vsButton_clicked()
 {
     int code;
-    code = std::system("start C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Preview\\Common7\\IDE\\devenv.exe");
+    code = std::system("start %PROGRAMFILES(X86)%\\\"Microsoft Visual Studio\"\\2022\\Preview\\Common7\\IDE\\devenv.exe");
     if (code != 0) {
-        code = std::system("start C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Community\\Common7\\IDE\\devenv.exe");
+        code = std::system("start %PROGRAMFILES(X86)%\\\"Microsoft Visual Studio\"\\2022\\Community\\Common7\\IDE\\devenv.exe");
         if (code != 0) {
-            code = std::system("start C:\\\"Program Files (x86)\"\\\"Microsoft Visual Studio\"\\2019\\Comunity\\Common7\\IDE\\devenv.exe");
+            code = std::system("start %PROGRAMFILES(X86)%\\\"Microsoft Visual Studio\"\\2019\\Comunity\\Common7\\IDE\\devenv.exe");
             if (code != 0) {
                 std::cout << "An error has occured while running Microsoft Visual Studio" << std::endl;
             }
@@ -66,13 +66,16 @@ void MainWindow::on_vsButton_clicked()
 void MainWindow::on_discordButton_clicked()
 {
     int code;
-    code = std::system("start %USERPROFILE%\\AppData\\Local\\DiscordDevelopment\\app-1.0.904\\DiscordDevelopment.exe --processStart DiscordDevelopment.exe");
+    code = std::system("start %LOCALAPPDATA%\\DiscordDevelopment\\Update.exe --processStart DiscordDevelopment.exe");
     if (code != 0) {
-        code = std::system("start %USERPROFILE%\\AppData\\Local\\DiscordCanary\\Update.exe --processStart DiscordCanary.exe");
+        code = std::system("start %LOCALAPPDATA%\\DiscordCanary\\Update.exe --processStart DiscordCanary.exe");
         if (code != 0) {
-            code = std::system("start %USERPROFILE%\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe");
+            code = std::system("start %LOCALAPPDATA%\\Discord\\Update.exe --processStart Discord.exe");
             if (code != 0) {
-                std::cout << "An error has occured while running Discord" << std::endl;
+                code = std::system("start %LOCALAPPDATA%\\DiscordPTB\\Update.exe --processStart DiscordPTB.exe");
+                if (code != 0) {
+                    std::cout << "An error has occured while running Discord" << std::endl;
+                }
             }
         }
     }
