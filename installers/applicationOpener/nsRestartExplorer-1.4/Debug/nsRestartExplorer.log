@@ -1,9 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1126,5): warning MSB4211: The property "GetTargetPathDependsOn" is being set to a value for the first time, but it was already consumed at "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets (2243,5)".
-cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  nsRestartExplorer.c
-  nsNative.c
-  Generating Code...
-C:\Users\perkinsal\gh\c--\installers\applicationOpener\nsRestartExplorer-1.4\nsNative.c(105,5): warning C4996: 'GetVersionExW': was declared deprecated
-nsNative.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-     Creating library C:\Users\perkinsal\gh\c--\installers\applicationOpener\nsRestartExplorer-1.4\Debug\nsRestartExplorer.lib and object C:\Users\perkinsal\gh\c--\installers\applicationOpener\nsRestartExplorer-1.4\Debug\nsRestartExplorer.exp
-  nsRestartExplorer.vcxproj -> C:\Users\perkinsal\gh\c--\installers\applicationOpener\nsRestartExplorer-1.4\Debug\nsRestartExplorer.dll

@@ -52,6 +52,7 @@ FunctionEnd
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
+  !define MUI_FINISHPAGE_RUN "$INSTDIR\{APPFILE}"
 
   ; Uninstaller Pages
   !insertmacro MUI_UNPAGE_CONFIRM
