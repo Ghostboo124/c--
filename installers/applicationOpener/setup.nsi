@@ -3,6 +3,8 @@
 
   !include "MUI2.nsh"
   !include "logiclib.nsh"
+  !define MULTIUSER_EXECUTIONLEVEL Highest
+  !include "MultiUser.nsh"
 
 ;--------------------------------
 ; Custom defines
@@ -32,6 +34,15 @@
   !define MUI_WELCOMEPAGE_TITLE        "${SLUG} Setup"
 
 ;--------------------------------
+Function .onInit
+  !insertmacro MULTIUSER_INIT
+FunctionEnd
+
+Function un.onInit
+  !insertmacro MULTIUSER_UNINIT
+FunctionEnd
+
+;--------------------------------
 ; Pages
 
   ; Installer Pages
@@ -49,6 +60,9 @@
 
   ; Set UI Language
   !insertmacro MUI_LANGUAGE "English"
+
+  ; Test
+  
 
 ;--------------------------------
 ; Example Section - DirectX
