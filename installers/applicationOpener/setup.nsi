@@ -57,7 +57,7 @@ FunctionEnd
   ; Uninstaller Pages
   !insertmacro MUI_UNPAGE_CONFIRM
   !insertmacro MUI_UNPAGE_INSTFILES
-  !insertmacro MUI_UNPAGE_FINISH
+  ;!insertmacro MUI_UNPAGE_FINISH
 
   ; Set UI Language
   !insertmacro MUI_LANGUAGE "English"
@@ -89,11 +89,11 @@ FunctionEnd
     WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "InstallLocation"      "$INSTDIR"
     WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "Version"              "${VERSION}"
     WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "DisplayName"          "${SLUG}"
-    WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "DisplayIcon"          "$INSTDIR\data\icons\ase.ico"
+    WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "DisplayIcon"          "$INSTDIR\icon.ico"
     WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "DisplayVersion"       "${VERSION}"
     WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "UninstallString"      "$\"$INSTDIR\Uninstall.exe$\""
     WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "QuietUninstallString" "$\"$INSTDIR\Uninstall.exe$\" /S"
-    WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "Publisher"            "Iagara Studio S.A."
+    WriteRegStr HKCU   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "Publisher"            "Alexander R. Perkins"
     WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "EstimatedSize"        0x00008995
     WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "Language"             0x00000409
     WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${NAME}\" "NoModify"             0x00000001
