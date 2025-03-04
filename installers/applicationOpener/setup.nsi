@@ -11,7 +11,7 @@
 
   !define NAME    "Application Opener"
   !define APPFILE "applicationOpener.exe"
-  !define VERSION "1.1.0"
+  !define VERSION "1.1.2"
   !define SLUG    "${NAME} v${VERSION}"
 
 ;--------------------------------
